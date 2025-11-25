@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <>
       {/* About Section */}
-      <section className="w-full relative overflow-hidden">
+      <section className="w-full relative overflow-hidden bg-white">
         {/* Banner Section */}
         <div className="w-full h-[400px] md:h-[500px] bg-gradient-to-r from-[#0B7A75] via-[#083f41] to-black flex items-center justify-center">
           <div className="text-center px-6 z-10 max-w-2xl animate-fadeSlideInLeft">
@@ -65,7 +65,7 @@ export default function AboutSection() {
       </section>
 
       {/* Mission & Vision Section */}
-<section className="w-full py-16">
+<section className="w-full py-16 bg-white">
   <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
     
     {/* Mission Card */}
