@@ -31,6 +31,7 @@ export default function Footer() {
             <li><Link href="/" className="hover:text-white transition">Home</Link></li>
             <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
             <li><Link href="/services" className="hover:text-white transition">Services</Link></li>
+            <li><Link href="/blogs" className="hover:text-white transition">Blogs</Link></li>
             <li><Link href="/appointment" className="hover:text-white transition">Book Appointment</Link></li>
             <li><Link href="/contact" className="hover:text-white transition">Contact</Link></li>
           </ul>
@@ -40,11 +41,11 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-semibold text-[#4EE0D4]">Our Services</h3>
           <ul className="mt-4 space-y-3 text-gray-300">
-            <li><Link href="/services/orthodontics" className="hover:text-white transition">Orthodontics</Link></li>
-            <li><Link href="/services/teeth-whitening" className="hover:text-white transition">Teeth Whitening</Link></li>
-            <li><Link href="/services/cavity-filling" className="hover:text-white transition">Cavity Filling</Link></li>
-            <li><Link href="/services/dental-implants" className="hover:text-white transition">Dental Implants</Link></li>
-            <li><Link href="/services/root-canal" className="hover:text-white transition">Root Canal Treatment</Link></li>
+            <li><Link href="#" className="hover:text-white transition">Orthodontics</Link></li>
+            <li><Link href="#" className="hover:text-white transition">Teeth Whitening</Link></li>
+            <li><Link href="#" className="hover:text-white transition">Cavity Filling</Link></li>
+            <li><Link href="#" className="hover:text-white transition">Dental Implants</Link></li>
+            <li><Link href="#" className="hover:text-white transition">Root Canal Treatment</Link></li>
           </ul>
         </div>
 

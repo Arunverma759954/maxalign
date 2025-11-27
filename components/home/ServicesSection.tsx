@@ -63,20 +63,20 @@ export default function ServicesSection() {
 
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
-         <div
+      <div
   key={index}
-  className="relative bg-[#0A1F26] rounded-xl p-6 flex flex-col gap-4 shadow-xl transform transition-all duration-500
+  className="relative bg-[#0C3B3A]/90 rounded-xl p-6 flex flex-col gap-4 shadow-xl transform transition-all duration-500
              hover:-translate-y-3 hover:shadow-[0_0_20px_#ffffff]"
 >
   <div className="flex items-center justify-center mb-4">
-    <div className="p-4 bg-[#0B7A75]/20 rounded-full animate-bounce">
+    <div className="p-4 bg-[#0B7A75]/30 rounded-full animate-bounce">
       {service.icon}
     </div>
   </div>
   <h3 className="text-2xl font-semibold text-[#4EE0D4] text-center">
     {service.title}
   </h3>
-  <p className="text-gray-300 text-center">{service.description}</p>
+  <p className="text-gray-200 text-center">{service.description}</p>
   <div className="flex justify-center mt-auto">
     <Link href={service.link}>
       <button className="bg-[#4EE0D4] hover:bg-[#36c9c0] text-black px-4 py-2 rounded-md font-semibold shadow-md transition">
@@ -85,6 +85,7 @@ export default function ServicesSection() {
     </Link>
   </div>
 </div>
+
 
         ))}
       </div>

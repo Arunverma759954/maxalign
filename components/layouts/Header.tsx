@@ -32,6 +32,7 @@ export default function Header() {
           <Link href="/about" className="hover:text-[#0B7A75] transition">About</Link>
           <Link href="/services" className="hover:text-[#0B7A75] transition">Services</Link>
           <Link href="/gallery" className="hover:text-[#0B7A75] transition">Gallery</Link>
+          <Link href="/blogs" className="hover:text-[#0B7A75] transition">Blogs</Link>
           <Link href="/contact" className="hover:text-[#0B7A75] transition">Contact Us</Link>
         </nav>
 
@@ -75,6 +76,7 @@ export default function Header() {
         <Link href="/about" className="block hover:text-[#4EE0D4]">About</Link>
         <Link href="/services" className="block hover:text-[#4EE0D4]">Services</Link>
         <Link href="/gallery" className="block hover:text-[#4EE0D4]">Gallery</Link>
+        <Link href="/blogs" className="block hover:text-[#4EE0D4]">Blogs</Link>
         <Link href="/contact" className="block hover:text-[#4EE0D4]">Contact Us</Link>
 
         <a

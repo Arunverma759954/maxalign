@@ -1,39 +1,48 @@
+"use client";
+import Link from "next/link";
+
 export default function ServiceSection() {
   const services = [
     {
       name: "Orthodontic Treatment",
       img: "/assets/services/s1.jpg",
       desc: "Straighten your teeth with personalized orthodontic care for a perfect smile.",
+      link: "/services/orthodontic-treatment",
     },
     {
       name: "Teeth Whitening",
       img: "/assets/services/s2.jpg",
       desc: "Brighten your smile with safe and effective teeth whitening treatments.",
+      link: "/services/teeth-whitening",
     },
     {
       name: "Cavity Treatment",
       img: "/assets/services/s3.jpg",
       desc: "Restore your teeth with expert cavity treatment and filling options.",
+      link: "/services/cavity-treatment",
     },
     {
       name: "Gum-Disease Treatment",
       img: "/assets/services/s4.jpg",
       desc: "Protect your gums and maintain oral health with professional care.",
+      link: "/services/gum-disease-treatment",
     },
     {
       name: "Invisible Aligners",
       img: "/assets/services/s5.jpg",
       desc: "Discreetly align your teeth with custom-made invisible aligners.",
+      link: "/services/invisible-aligners",
     },
     {
       name: "Dental Implants",
       img: "/assets/services/s6.jpg",
       desc: "Replace missing teeth with natural-looking and durable dental implants.",
+      link: "/services/dental-implants",
     },
   ];
 
   return (
-    <section className="w-full relative overflow-hidden">
+    <section className="w-full relative overflow-hidden bg-white">
 
       {/* Banner Section */}
       <div className="w-full h-[400px] md:h-[500px] bg-gradient-to-r from-[#0B7A75] via-[#083f41] to-black flex items-center justify-center">
@@ -77,23 +86,22 @@ export default function ServiceSection() {
 
       {/* Services List with Gradient Cards */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
-        {services.map(({ name, img, desc }, idx) => (
-          <div
-            key={idx}
-            className="bg-gradient-to-b from-[#E0F7F6]/50 to-[#0B7A75]/20 rounded-3xl shadow-lg overflow-hidden cursor-pointer hover:shadow-2xl transition-shadow"
-          >
-            <div className="w-full h-48 overflow-hidden">
-              <img
-                src={img}
-                alt={name}
-                className="w-full h-full object-cover"
-              />
+        {services.map(({ name, img, desc, link }, idx) => (
+          <Link key={idx} href={link} className="block">
+            <div className="bg-gradient-to-b from-[#E0F7F6]/50 to-[#0B7A75]/20 rounded-3xl shadow-lg overflow-hidden cursor-pointer hover:shadow-2xl transition-shadow">
+              <div className="w-full h-48 overflow-hidden">
+                <img
+                  src={img}
+                  alt={name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-[#0B7A75] font-semibold text-2xl mb-3">{name}</h3>
+                <p className="text-gray-700 text-base leading-relaxed">{desc}</p>
+              </div>
             </div>
-            <div className="p-6">
-              <h3 className="text-[#0B7A75] font-semibold text-2xl mb-3">{name}</h3>
-              <p className="text-gray-700 text-base leading-relaxed">{desc}</p>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
