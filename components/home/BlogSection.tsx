@@ -9,13 +9,13 @@ export default function BlogSection() {
       title: "Why Max Align is one of the Best Dental Clinics in Marathahalli",
       desc: "Finding the right dental clinic can be a challenge. Here is why Max Align stands out...",
       img: "/assets/blogs/b1.jpg",
-      link: "/blog/max-align-best-dental-clinic",
+       link: "/blogs/max-align-best-dental-clinic",
     },
     {
       title: "Top 5 Benefits of Professional Teeth Whitening",
       desc: "Reveal a brighter, more confident smile with safe and long-lasting whitening...",
       img: "/assets/blogs/b2.jpg",
-      link: "/blog/professional-teeth-whitening-benefits",
+      link: "/blogs/professional-teeth-whitening",
     },
     {
       title: "The Importance of Regular Dental Check-Ups",

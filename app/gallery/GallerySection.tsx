@@ -17,7 +17,7 @@ export default function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="w-full relative overflow-hidden bg-white">
+    <section className="w-full relative overflow-hidden">
 
       {/* Banner Section */}
       <div className="w-full h-[400px] md:h-[500px] bg-gradient-to-r from-[#0B7A75] via-[#083f41] to-black flex items-center justify-center">

@@ -7,20 +7,15 @@ export const metadata = {
   description: "Modern Dental Clinic Website",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-white">
-      <body className="bg-white text-black">
+    <html lang="en">
+      <body>
         <Header />
-
+        
         <main className="">
           {children}
         </main>
-
         <Footer />
       </body>
     </html>

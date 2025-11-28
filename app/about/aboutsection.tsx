@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <>
       {/* About Section */}
-      <section className="w-full relative overflow-hidden bg-white">
+      <section className="w-full relative overflow-hidden">
         {/* Banner Section */}
         <div className="w-full h-[400px] md:h-[500px] bg-gradient-to-r from-[#0B7A75] via-[#083f41] to-black flex items-center justify-center">
           <div className="text-center px-6 z-10 max-w-2xl animate-fadeSlideInLeft">
@@ -45,19 +45,19 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
               <div className="p-4 bg-[#0B7A75]/10 rounded-lg shadow-md">
                 <h3 className="font-semibold text-[#0B7A75] mb-1">Experienced Team</h3>
-                <p className=" text-black">Top-notch dental experts ensuring high-quality care.</p>
+                <p>Top-notch dental experts ensuring high-quality care.</p>
               </div>
               <div className="p-4 bg-[#0B7A75]/10 rounded-lg shadow-md">
                 <h3 className="font-semibold text-[#0B7A75] mb-1">Comprehensive Services</h3>
-                <p className=" text-black">All dental procedures from basic care to advanced treatments.</p>
+                <p>All dental procedures from basic care to advanced treatments.</p>
               </div>
               <div className="p-4 bg-[#0B7A75]/10 rounded-lg shadow-md">
                 <h3 className="font-semibold text-[#0B7A75] mb-1">State-of-the-Art Technology</h3>
-                <p className=" text-black">Modern equipment and digital diagnostics for precision.</p>
+                <p>Modern equipment and digital diagnostics for precision.</p>
               </div>
               <div className="p-4 bg-[#0B7A75]/10 rounded-lg shadow-md">
                 <h3 className="font-semibold text-[#0B7A75] mb-1">Emergency Services</h3>
-                <p className=" text-black">Quick response to urgent dental needs, ensuring comfort.</p>
+                <p>Quick response to urgent dental needs, ensuring comfort.</p>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function AboutSection() {
       </section>
 
       {/* Mission & Vision Section */}
-<section className="w-full py-16 bg-white">
+<section className="w-full py-16">
   <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
     
     {/* Mission Card */}
@@ -114,19 +114,19 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
               <div className="p-4 bg-[#0B7A75]/10 rounded-lg shadow-md text-center">
                 <h3 className="font-semibold text-[#0B7A75] mb-2">Expert Team</h3>
-                <p className=" text-black">Highly qualified professionals delivering top-quality dental care.</p>
+                <p>Highly qualified professionals delivering top-quality dental care.</p>
               </div>
               <div className="p-4 bg-[#0B7A75]/10 rounded-lg shadow-md text-center">
                 <h3 className="font-semibold text-[#0B7A75] mb-2">Advanced Technology</h3>
-                <p className=" text-black">Modern tools and digital solutions for precise treatments.</p>
+                <p>Modern tools and digital solutions for precise treatments.</p>
               </div>
               <div className="p-4 bg-[#0B7A75]/10 rounded-lg shadow-md text-center">
                 <h3 className="font-semibold text-[#0B7A75] mb-2">Personalized Care</h3>
-                <p className=" text-black">Tailored treatments ensuring comfort and best results for every patient.</p>
+                <p>Tailored treatments ensuring comfort and best results for every patient.</p>
               </div>
               <div className="p-4 bg-[#0B7A75]/10 rounded-lg shadow-md text-center">
                 <h3 className="font-semibold text-[#0B7A75] mb-2">Safe & Clean</h3>
-                <p className=" text-black">Strict hygiene and safety protocols for a worry-free dental experience.</p>
+                <p>Strict hygiene and safety protocols for a worry-free dental experience.</p>
               </div>
             </div>
           </div>
