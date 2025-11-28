@@ -21,7 +21,7 @@ export default function BlogSection() {
       title: "The Importance of Regular Dental Check-Ups",
       desc: "Skipping dental visits? Here’s why regular check-ups are essential...",
       img: "/assets/blogs/b3.jpg",
-      link: "/blog/importance-of-dental-checkups",
+      link: "/blogs/importance-of-dental-checkups",
     },
   ];
 
