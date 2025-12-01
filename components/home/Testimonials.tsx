@@ -7,38 +7,38 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 export default function Testimonials() {
   const reviews = [
     {
-      name: "Aarav Sharma",
+      name: "Ritu Sharma",
       review:
         "MaxAlign Dental Clinic gave me the best orthodontic care! The invisible aligners worked perfectly and the staff was very friendly.",
-      img:"/assets/t1.jpg",
+      img: "/assets/t1.jpg",
       rating: 5,
     },
     {
-      name: "Sneha Kapoor",
+      name: "Aarav Mehta ",
       review:
         "The teeth whitening treatment was amazing. I got results in just one session. Highly recommended!",
-      img:"/assets/t2.jpg",
+      img: "/assets/t2.jpg",
       rating: 5,
     },
     {
-      name: "Rahul Mehta",
+      name: "Priya Sharma",
       review:
         "Professional, clean, and super advanced clinic. The cavity filling was painless.",
-      img:"/assets/t3.jpg",
+      img: "/assets/t3.jpg",
       rating: 5,
     },
     {
-      name: "Priya Nair",
+      name: "Mehak ",
       review:
         "Very polite staff and modern equipment. Best dental experience ever!",
-      img:"/assets/t4.jpg",
+      img: "/assets/t4.jpg",
       rating: 5,
     },
     {
       name: "Kunal Verma",
       review:
         "Quick service, highly skilled doctor! Definitely recommend this clinic.",
-      img:"/assets/t2.jpg",
+      img: "/assets/t2.jpg",
       rating: 5,
     },
   ];
@@ -46,21 +46,16 @@ export default function Testimonials() {
   const [index, setIndex] = useState(0);
 
   const next = () => {
-    if (index < reviews.length - 3) {
-      setIndex(index + 1);
-    }
+    if (index < reviews.length - 3) setIndex(index + 1);
   };
 
   const prev = () => {
-    if (index > 0) {
-      setIndex(index - 1);
-    }
+    if (index > 0) setIndex(index - 1);
   };
 
   return (
     <section className="py-20 bg-white text-black">
       <div className="max-w-7xl mx-auto px-6 md:text-center">
-        
         {/* Heading */}
         <h2 className="text-4xl md:text-5xl font-bold text-[#0B7A75]">
           What Our Patients Say
@@ -71,7 +66,6 @@ export default function Testimonials() {
 
         {/* Slider Box */}
         <div className="relative mt-14">
-          {/* Wrapper */}
           <div className="overflow-hidden">
             <div
               className="flex transition-all duration-500"
@@ -83,19 +77,21 @@ export default function Testimonials() {
                 <div key={i} className="w-full md:w-1/3 p-3 flex-shrink-0">
                   <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 h-full">
                     
-                    {/* User Image */}
-                    <div className="flex justify-center">
-                      <Image
-                        src={item.img}
-                        width={90}
-                        height={90}
-                        alt={item.name}
-                        className="rounded-full shadow-md"
-                      />
+                    {/* 🔥 Perfect Circular User Image */}
+                    <div className="flex justify-center mb-4">
+                      <div className="w-24 h-24 rounded-full overflow-hidden shadow-md border flex items-center justify-center bg-gray-100">
+                        <Image
+                          src={item.img}
+                          width={200}
+                          height={200}
+                          alt={item.name}
+                          className="object-cover w-full h-full"
+                        />
+                      </div>
                     </div>
 
                     {/* Stars */}
-                    <div className="flex justify-center gap-1 mt-4 text-[#FFD700]">
+                    <div className="flex justify-center gap-1 text-[#FFD700]">
                       {[...Array(item.rating)].map((_, s) => (
                         <FaStar key={s} className="text-xl" />
                       ))}
