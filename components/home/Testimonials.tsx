@@ -10,35 +10,35 @@ export default function Testimonials() {
       name: "Aarav Sharma",
       review:
         "MaxAlign Dental Clinic gave me the best orthodontic care! The invisible aligners worked perfectly and the staff was very friendly.",
-      img: "https://randomuser.me/api/portraits/men/32.jpg",
+      img:"/assets/t1.jpg",
       rating: 5,
     },
     {
       name: "Sneha Kapoor",
       review:
         "The teeth whitening treatment was amazing. I got results in just one session. Highly recommended!",
-      img: "https://randomuser.me/api/portraits/women/65.jpg",
+      img:"/assets/t2.jpg",
       rating: 5,
     },
     {
       name: "Rahul Mehta",
       review:
         "Professional, clean, and super advanced clinic. The cavity filling was painless.",
-      img: "https://randomuser.me/api/portraits/men/75.jpg",
+      img:"/assets/t3.jpg",
       rating: 5,
     },
     {
       name: "Priya Nair",
       review:
         "Very polite staff and modern equipment. Best dental experience ever!",
-      img: "https://randomuser.me/api/portraits/women/22.jpg",
+      img:"/assets/t4.jpg",
       rating: 5,
     },
     {
       name: "Kunal Verma",
       review:
         "Quick service, highly skilled doctor! Definitely recommend this clinic.",
-      img: "https://randomuser.me/api/portraits/men/12.jpg",
+      img:"/assets/t2.jpg",
       rating: 5,
     },
   ];
