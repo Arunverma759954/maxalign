@@ -95,10 +95,10 @@ export default function Footer() {
 
         {/* Call & WhatsApp Buttons Right */}
         <div className="flex gap-2">
-          <a href="tel:+919876543210" className="bg-[#4EE0D4] text-[#062023] p-2 rounded flex items-center justify-center hover:bg-white transition">
+          <a href="tel:+919321533345" className="bg-[#4EE0D4] text-[#062023] p-2 rounded flex items-center justify-center hover:bg-white transition">
             <FaPhoneAlt />
           </a>
-          <a href="https://wa.me/919876543210" target="_blank" className="bg-[#25D366] text-white p-2 rounded flex items-center justify-center hover:bg-green-600 transition">
+          <a href="https://wa.me/919321533345" target="_blank" className="bg-[#25D366] text-white p-2 rounded flex items-center justify-center hover:bg-green-600 transition">
             <FaWhatsapp />
           </a>
         </div>
@@ -106,7 +106,7 @@ export default function Footer() {
 
    {/* Floating WhatsApp Button - Desktop Only */}
 <a
-  href="https://wa.me/919876543210"
+  href="https://wa.me/919321533345"
   target="_blank"
   className="hidden sm:flex fixed bottom-5 right-5 z-50 bg-[#25D366] w-14 h-14 rounded-full items-center justify-center shadow-lg hover:bg-green-600 transition"
 >
