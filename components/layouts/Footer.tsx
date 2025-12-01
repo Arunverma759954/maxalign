@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaPhoneAlt, FaMapMarkerAlt, FaEnvelope, FaInstagram,  FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -18,9 +18,9 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="flex gap-4 mt-5">
-            <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaFacebook /></a>
-            <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaInstagram /></a>
-            <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaLinkedin /></a>
+            {/* <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaFacebook /></a> */}
+            <a href="https://www.instagram.com/maxalign.dental/" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaInstagram /></a>
+            {/* <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaLinkedin /></a> */}
           </div>
         </div>
 
