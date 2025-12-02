@@ -21,18 +21,16 @@ export default function Footer() {
             {/* <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaFacebook /></a> */}
             <a href="https://www.instagram.com/maxalign.dental/" className="text-[#4EE0D4] hover:text-white text-4xl transition"><FaInstagram /></a>
             {/* <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaLinkedin /></a> */}
-            <div className="mt-5 rounded-lg overflow-hidden shadow-lg border border-gray-700">
-           <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.301860574687!2d77.706165!3d12.952526000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae135075e27577%3A0xcf30be6c865fa9ad!2sMaxAlign%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1764650308783!5m2!1sen!2sin"
-          width="100%"
-          height="200"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+           <div className="mt-5">
+          <a
+            href="https://www.google.com/maps?q=12.952526,77.706165"
+            target="_blank"
+            className="inline-block bg-[#4EE0D4] text-[#062023] px-5 py-3 rounded-lg font-semibold hover:bg-white transition"
+          >
+            Get Directions
+          </a>
+        </div>
 
-          </div>
 
           </div>
         </div>
