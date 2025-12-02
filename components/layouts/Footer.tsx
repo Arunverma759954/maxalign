@@ -21,17 +21,16 @@ export default function Footer() {
             {/* <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaFacebook /></a> */}
             <a href="https://www.instagram.com/maxalign.dental/" className="text-[#4EE0D4] hover:text-white text-4xl transition"><FaInstagram /></a>
             {/* <a href="#" className="text-[#4EE0D4] hover:text-white text-2xl transition"><FaLinkedin /></a> */}
-           <div className="mt-5">
+         <div className="mt-5">
           <a
-            href="https://www.google.com/maps?q=12.952526,77.706165"
+            href="https://www.google.com/maps?ll=12.952526,77.706165&z=17&t=m&hl=en&gl=IN&mapclient=embed&cid=14929642138053355949"
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-[#4EE0D4] text-[#062023] px-5 py-3 rounded-lg font-semibold hover:bg-white transition"
           >
             Get Directions
           </a>
         </div>
-
-
           </div>
         </div>
 
