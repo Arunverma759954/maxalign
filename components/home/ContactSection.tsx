@@ -29,14 +29,27 @@ export default function ContactSection() {
         <div className="bg-white text-black rounded-2xl p-8 flex flex-col gap-6 shadow-lg">
           <h2 className="text-3xl font-bold text-[#0B7A75]">Contact Now</h2>
 
-          <div className="space-y-2 text-gray-800">
-            <p><strong>Maxalign Dental Clinic, Marathahalli, Bengaluru</strong></p>
-            <p>1st floor, Anjanadri Krest, SY no. 104/3A,</p>
-            <p>Munnekollal Main Rd, Marathahalli, Bengaluru, Karnataka 560037</p>
-            <p><strong>Phone:</strong> 9321533345</p>
-            <p><strong>Email:</strong> maxaligndental@gmail.com</p>
-            <p><strong>Hours:</strong> Mon to Sat 9:00AM to 9:00PM</p>
-          </div>
+         <div className="space-y-2 text-gray-800">
+          <p><strong>Maxalign Dental Clinic, Marathahalli, Bengaluru</strong></p>
+          <p>1st floor, Anjanadri Krest, SY no. 104/3A,</p>
+          <p>Munnekollal Main Rd, Marathahalli, Bengaluru, Karnataka 560037</p>
+        
+          <p>
+            <strong>Phone:</strong>{" "}
+            <a href="tel:+919321533345" className="text-blue-600 hover:underline">
+              9321533345
+            </a>
+          </p>
+        
+          <p>
+            <strong>Email:</strong>{" "}
+            <a href="mailto:maxaligndental@gmail.com" className="text-blue-600 hover:underline">
+              maxaligndental@gmail.com
+            </a>
+          </p>
+        
+          <p><strong>Hours:</strong> Mon to Sat 9:00AM to 9:00PM</p>
+        </div>
 
           <p className="mt-4 text-gray-700">
             Our Dental Clinic Marathahalli is easily accessible by public and private transport. We serve patients from across Bengaluru, including Whitefield, Bellandur, and HAL road.
@@ -46,7 +59,7 @@ export default function ContactSection() {
           <div className="mt-6 w-full h-64 rounded-lg overflow-hidden shadow-inner">
            <iframe
             title="Maxalign Dental Clinic Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.529622060578!2d77.6606231152157!3d12.955330218791727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13984a7f0455%3A0x1234567890abcdef!2sMaxalign%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1697848999999!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3888.301860574687!2d77.706165!3d12.952526000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae135075e27577%3A0xcf30be6c865fa9ad!2sMaxAlign%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1764651523572!5m2!1sen!2sin"
             width="100%"
             height="100%"
             className="border-0"
