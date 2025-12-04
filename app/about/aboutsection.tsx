@@ -2,7 +2,7 @@ export default function AboutSection() {
   return (
     <>
       {/* About Section */}
-      <div bg-white>
+      <div  className="bg-white">
       <section className="w-full relative overflow-hidden">
         {/* Banner Section */}
         <div className="w-full h-[400px] md:h-[500px] bg-gradient-to-r from-[#0B7A75] via-[#083f41] to-black flex items-center justify-center">
