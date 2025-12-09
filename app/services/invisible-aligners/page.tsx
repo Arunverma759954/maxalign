@@ -3,7 +3,7 @@
 
 
 import React from "react";
-import InvisibleAligners from "./InvisibleAligners";
+import Invisible from "./Invisible";
 
 /* ✅ SEO Metadata */
 export const metadata = {
@@ -49,5 +49,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <InvisibleAligners />;
+  return <Invisible />;
 }
