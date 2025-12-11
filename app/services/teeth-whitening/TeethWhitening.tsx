@@ -1,5 +1,5 @@
 "use client";
-
+import ServiceTabs from "@/components/services/ServiceTabs";
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -16,7 +16,7 @@ export default function TeethWhitening() {
           className="object-cover brightness-[0.6]"
         />
         <div className="absolute inset-0 flex items-center justify-center px-6">
-          <div className="md:text-center text-white max-w-7xl">
+          <div className="md:text-center pt-10 md:pt-0 text-white max-w-7xl">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
               The Importance of Teeth Whitening
             </h1>
@@ -27,6 +27,7 @@ export default function TeethWhitening() {
         </div>
       </div>
 
+        <ServiceTabs />
       {/* ===================== INTRO ===================== */}
       <div className="max-w-6xl mx-auto px-6 py-20">
         <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-4">
@@ -132,7 +133,7 @@ export default function TeethWhitening() {
               "Aging or certain medications",
               "Poor dental hygiene"
             ].map((item, idx) => (
-              <li key={idx} className="flex items-center space-x-3">
+              <li key={idx} className="flex items-center text-black space-x-3">
                 <FaCheckCircle className="text-[#0B7A75] mt-1" />
                 <span>{item}</span>
               </li>
@@ -157,7 +158,7 @@ export default function TeethWhitening() {
       ].map((item, idx) => (
         <div
           key={idx}
-          className="flex items-center space-x-3 bg-[#F0FDF4] rounded-xl px-6 py-4 shadow-md hover:shadow-lg transition"
+          className="flex items:left md:items-center space-x-3 bg-[#F0FDF4] rounded-xl px-6 py-4 shadow-md hover:shadow-lg transition"
         >
           <FaCheckCircle className="text-[#0B7A75] mt-1" />
           <span>{item}</span>
@@ -192,7 +193,7 @@ export default function TeethWhitening() {
       </div>
 
       {/* ===================== CTA ===================== */}
-      <div className="w-full bg-[#0B7A75] py-20 md:text-center text-white">
+      <div className="w-full p-4 bg-[#0B7A75] py-20 md:text-center text-white">
         <h3 className="text-3xl md:text-5xl font-bold mb-6">
           Book Your Teeth Whitening Appointment Today!
         </h3>

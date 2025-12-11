@@ -1,4 +1,5 @@
 "use client";
+import ServiceTabs from "@/components/services/ServiceTabs";
 
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
@@ -16,7 +17,7 @@ export default function CavityPage() {
           className="object-cover brightness-[0.6]"
         />
         <div className="absolute inset-0 flex items-center justify-center px-6">
-          <div className="text-center text-white max-w-7xl">
+          <div className="md:text-center text-white pt-4 md:pt-0 max-w-7xl">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
               Painless Cavity Treatment in Marathahalli
             </h1>
@@ -26,6 +27,9 @@ export default function CavityPage() {
           </div>
         </div>
       </div>
+
+         {/* ===== SERVICE TABS ===== */}
+      <ServiceTabs />
 
       {/* ===================== INTRO ===================== */}
       <div className="max-w-6xl mx-auto px-6 py-20">
@@ -40,7 +44,7 @@ export default function CavityPage() {
       {/* ===================== WHY CHOOSE MAXALIGN / CAVITY POINTS ===================== */}
       <div className="py-20 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#0B7A75]">
+          <h3 className="text-3xl md:text-4xl font-bold mb-12 md:text-center text-[#0B7A75]">
             Best Dentist for Cavities in Marathahalli
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg md:text-xl">
@@ -93,7 +97,7 @@ export default function CavityPage() {
       {/* ===================== FILLING PROCEDURE ===================== */}
       <div className="py-20 bg-gradient-to-r from-[#0B7A75]/10 to-[#083f41]/5">
         <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-3xl md:text-4xl font-bold text-[#0B7A75] mb-10 text-center">
+          <h3 className="text-3xl md:text-4xl font-bold text-[#0B7A75] mb-10 md:text-center">
             Painless Tooth Filling Procedure at MaxAlign
           </h3>
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg md:text-xl text-gray-700">
@@ -115,7 +119,7 @@ export default function CavityPage() {
       {/* ===================== TYPES OF FILLINGS ===================== */}
       <div className="py-20 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-3xl md:text-4xl font-bold mb-10 text-center text-[#0B7A75]">
+          <h3 className="text-3xl md:text-4xl font-bold mb-10 md:text-center text-[#0B7A75]">
             Types of Fillings We Offer
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg md:text-xl">
@@ -176,7 +180,7 @@ export default function CavityPage() {
 
 
       {/* ===================== CTA ===================== */}
-      <div className="w-full bg-[#0B7A75] py-20 text-center text-white">
+      <div className="w-full p-4 bg-[#0B7A75] py-20 md:text-center text-white">
         <h3 className="text-3xl md:text-5xl font-bold mb-6">
           Book Your Cavity Treatment Today
         </h3>

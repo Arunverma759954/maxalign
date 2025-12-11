@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white text-black shadow-md fixed top-0 left-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-2 md:py-4 flex items-center justify-between">
 
         {/* Logo */}
         <div className="flex items-center">
@@ -66,32 +66,33 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div
-        className={`md:hidden bg-[#0C3436] text-white px-6 py-5 space-y-4 text-lg transition-all duration-300 overflow-hidden ${
-          open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <Link href="/" className="block hover:text-[#4EE0D4]">Home</Link>
-        <Link href="/about" className="block hover:text-[#4EE0D4]">About</Link>
-        <Link href="/services" className="block hover:text-[#4EE0D4]">Services</Link>
-        <Link href="/gallery" className="block hover:text-[#4EE0D4]">Gallery</Link>
-        <Link href="/blogs" className="block hover:text-[#4EE0D4]">Blogs</Link>
-        <Link href="/contact" className="block hover:text-[#4EE0D4]">Contact Us</Link>
+     {/* Mobile Menu */}
+<div
+  className={`md:hidden bg-[#0C3436] text-white px-6 py-2 space-y-3 text-lg transition-all duration-300 overflow-hidden ${
+    open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+  }`}
+>
+  <Link href="/" className="block hover:text-[#4EE0D4]">Home</Link>
+  <Link href="/about" className="block hover:text-[#4EE0D4]">About</Link>
+  <Link href="/services" className="block hover:text-[#4EE0D4]">Services</Link>
+  <Link href="/gallery" className="block hover:text-[#4EE0D4]">Gallery</Link>
+  <Link href="/blogs" className="block hover:text-[#4EE0D4]">Blogs</Link>
+  <Link href="/contact" className="block hover:text-[#4EE0D4]">Contact Us</Link>
 
-        <a
-          href="tel:9321533345"
-          className="flex items-center gap-2 text-[#4EE0D4] font-medium"
-        >
-          <HiPhone size={20} /> 9321533345
-        </a>
+  <a
+    href="tel:9321533345"
+    className="flex items-center gap-2 text-[#4EE0D4] font-medium"
+  >
+    <HiPhone size={20} /> 9321533345
+  </a>
 
-        <Link href="/appointment">
-          <button className="w-full bg-[#0B7A75] hover:bg-[#096863] text-white px-5 py-2 rounded-md font-semibold mt-2 shadow-lg">
-            Book Appointment
-          </button>
-        </Link>
-      </div>
+  <Link href="/appointment">
+    <button className="w-full bg-[#0B7A75] hover:bg-[#096863] text-white px-5 py-2 rounded-md font-semibold shadow-lg">
+      Book Appointment
+    </button>
+  </Link>
+</div>
+
     </header>
   );
 }

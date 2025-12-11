@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
+import ServiceTabs from "@/components/services/ServiceTabs";
 
 export default function DentalImplants() {
   return (
@@ -16,7 +17,7 @@ export default function DentalImplants() {
           className="object-cover brightness-[0.6]"
         />
         <div className="absolute inset-0 flex items-center justify-center px-6">
-          <div className="text-center text-white max-w-7xl">
+          <div className="md:text-center text-white max-w-7xl">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
               Permanent Tooth Replacement in Marathahalli
             </h1>
@@ -26,6 +27,7 @@ export default function DentalImplants() {
           </div>
         </div>
       </div>
+      <ServiceTabs />
 
       {/* ===================== INTRO ===================== */}
       <div className="max-w-6xl mx-auto px-6 py-20">
@@ -66,7 +68,7 @@ export default function DentalImplants() {
 
       {/* ===================== OUR IMPLANT OPTIONS ===================== */}
       <div className="py-20 bg-white text-gray-800">
-        <h4 className="text-2xl md:text-3xl font-bold mb-12 text-center text-[#0B7A75]">
+        <h4 className="text-2xl p-6 md:p-0 md:text-3xl font-bold mb-12 md:text-center text-[#0B7A75]">
           Our Implant Options Include
         </h4>
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -96,7 +98,7 @@ export default function DentalImplants() {
       {/* ===================== WHY CHOOSE MAXALIGN ===================== */}
       <div className="py-20 bg-gradient-to-r from-[#0B7A75]/10 to-[#083f41]/5 text-gray-800">
         <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#0B7A75]">
+          <h3 className="text-3xl md:text-4xl font-bold mb-12 md:text-center text-[#0B7A75]">
             Why Patients Trust Max Align
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -125,7 +127,7 @@ export default function DentalImplants() {
       </div>
 
       {/* ===================== PATIENT TESTIMONIALS ===================== */}
-      <div className="py-20 bg-gradient-to-r from-[#0B7A75]/80 via-[#083f41]/70 to-black text-white text-center px-6">
+      <div className="py-20 bg-gradient-to-r from-[#0B7A75]/80 via-[#083f41]/70 to-black text-white md:text-center px-6">
         <h3 className="text-3xl md:text-4xl font-bold mb-6 text-[#00FFE0]">
           Patient Testimonials
         </h3>
@@ -138,11 +140,12 @@ export default function DentalImplants() {
       </div>
 
       {/* ===================== BOOK CONSULTATION CTA ===================== */}
-      <div className="w-full bg-[#0B7A75] py-20 text-center text-white">
-        <h3 className="text-3xl md:text-5xl font-bold mb-6">
+      <div className="w-full p-4 bg-[#0B7A75] py-20 md:text-center text-white">
+        <div className="max-w-7xl mx-auto">
+        <h3 className="text-3xl md:text-4xl font-bold mb-6">
           Book Your Free Consultation
         </h3>
-        <p className="text-lg md:text-2xl mb-8">
+        <p className="text-lg md:text-xl mb-8">
           If you're looking for dental implants in Marathahalli or permanent tooth replacement near you, Max Align Dental Clinic is here to help.
         </p>
         <a href="/contact">
@@ -150,6 +153,7 @@ export default function DentalImplants() {
             Book Your Appointment
           </button>
         </a>
+      </div>
       </div>
 
     </section>

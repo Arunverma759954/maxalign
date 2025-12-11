@@ -1,5 +1,5 @@
 "use client";
-
+import ServiceTabs from "@/components/services/ServiceTabs";
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -16,7 +16,7 @@ export default function OrthodonticTreatment() {
           className="object-cover brightness-[0.6]"
         />
         <div className="absolute inset-0 flex items-center justify-center px-6">
-          <div className="text-center text-white max-w-7xl">
+          <div className="md:text-center pt-10 md:pt-0 text-white max-w-7xl">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
               The Importance of Orthodonic Treatment
             </h1>
@@ -26,6 +26,7 @@ export default function OrthodonticTreatment() {
           </div>
         </div>
       </div>
+      <ServiceTabs />
 
       {/* ===================== INTRO ===================== */}
       <div className="max-w-6xl mx-auto px-6 py-20">
@@ -68,7 +69,7 @@ export default function OrthodonticTreatment() {
       {/* ===================== BRACES TYPES CARDS ===================== */}
       <div className="bg-gradient-to-r from-[#0B7A75]/10 to-[#083f41]/5 py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <h3 className="text-3xl md:text-4xl font-bold text-[#0B7A75] mb-12 text-center">Braces Types</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-[#0B7A75] mb-12 md:text-center">Braces Types</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               "Metal Braces: Durable and effective...",
@@ -80,7 +81,7 @@ export default function OrthodonticTreatment() {
               <div key={idx} className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
                 <div className="flex items-center mb-3">
                   <FaCheckCircle className="text-[#0B7A75] mr-3" />
-                  <h4 className="font-semibold text-lg">{item.split(':')[0]}</h4>
+                  <h4 className="font-semibold text-black text-lg">{item.split(':')[0]}</h4>
                 </div>
                 <p className="text-gray-700">{item.split(':')[1]}</p>
               </div>
@@ -130,7 +131,7 @@ export default function OrthodonticTreatment() {
     {/* ===================== WHY CHOOSE MAXALIGN WITH CARDS ===================== */}
 <div className="py-20 bg-white text-gray-800">
   <div className="max-w-6xl mx-auto px-6">
-    <h3 className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#0B7A75]">
+    <h3 className="text-3xl md:text-4xl font-bold mb-12 md:text-center text-[#0B7A75]">
       Why Choose MaxAlign Dental Clinic?
     </h3>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -157,7 +158,7 @@ export default function OrthodonticTreatment() {
       {/* ===================== POST-TREATMENT CARE TIPS ===================== */}
       <div className="py-20 bg-white text-gray-800">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl md:text-4xl font-bold mb-10 text-center text-[#0B7A75]">
+          <h3 className="text-3xl md:text-4xl font-bold mb-10 md:text-center text-[#0B7A75]">
             Post-Treatment Care Tips
           </h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg md:text-xl">
@@ -177,7 +178,7 @@ export default function OrthodonticTreatment() {
       </div>
 
       {/* ===================== CTA ===================== */}
-      <div className="w-full bg-[#0B7A75] py-20 text-center text-white">
+      <div className="w-full p-4 bg-[#0B7A75] py-20 md:text-center text-white">
         <h3 className="text-3xl md:text-5xl font-bold mb-6">
           Ready for a Confident, Beautiful Smile?
         </h3>
