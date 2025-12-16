@@ -25,29 +25,38 @@ export default function ServiceTabs() {
 
   return (
     <div className="w-full bg-white/70 backdrop-blur-xl border-b shadow-md sticky top-0 z-20">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex gap-4 overflow-x-auto no-scrollbar">
-
+      <div
+        className="
+          max-w-7xl mx-auto px-4 py-4
+          grid grid-cols-2 gap-3
+          md:flex md:gap-4 md:overflow-x-auto md:no-scrollbar
+        "
+      >
         {services.map((item) => {
           const active = pathname === item.slug;
 
           return (
-            <Link key={item.slug} href={item.slug}>
+            <Link key={item.slug} href={item.slug} className="w-full md:w-auto">
               <div
-                className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm md:text-base font-semibold transition-all cursor-pointer 
-                  shadow-sm 
+                className={`flex items-center justify-center md:justify-start gap-2 
+                  px-4 py-3 rounded-full text-xs md:text-base font-semibold transition-all 
+                  shadow-sm text-center
                 ${
                   active
-                    ? "bg-[#0B7A75] text-white shadow-lg scale-105"
-                    : "bg-gray-100 text-gray-700 hover:bg-[#0B7A75]/10 hover:scale-105"
+                    ? "bg-[#0B7A75] text-white shadow-lg md:scale-105"
+                    : "bg-gray-100 text-gray-700 hover:bg-[#0B7A75]/10 md:hover:scale-105"
                 }`}
               >
-                <span>{item.icon}</span>
+                {/* Icon only on desktop */}
+                <span className="hidden md:inline-flex">
+                  {item.icon}
+                </span>
+
                 <span>{item.name}</span>
               </div>
             </Link>
           );
         })}
-
       </div>
     </div>
   );
