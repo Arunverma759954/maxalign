@@ -103,10 +103,12 @@ export default function AppointmentSection() {
               required
             >
               <option value="">Select Service</option>
-              <option value="General Checkup">General Checkup</option>
-              <option value="Teeth Cleaning">Teeth Cleaning</option>
-              <option value="Orthodontics">Orthodontics</option>
-              <option value="Emergency Care">Emergency Care</option>
+              <option value="General Checkup">Orthodonic Treatment</option>
+              <option value="Teeth Cleaning">Teeth Whitening</option>
+              <option value="Orthodontics">Cavity Treatment</option>
+              <option value="Emergency Care">Gum Disease</option>
+              <option value="Invisalign">Invisalign</option>
+              <option value="Dental Implants">Dental Implants</option>
             </select>
             <textarea
               name="message"
