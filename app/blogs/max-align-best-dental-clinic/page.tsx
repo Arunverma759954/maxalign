@@ -29,6 +29,13 @@ export default function DentalCheckupBlog() {
       img: "/assets/blogs/b2.jpg",
       link: "/blogs/teeth-whitening",
     },
+    {
+      title: " The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter.",
+      desc: "Winter has a tendency of transforming day-to-day habits ...",
+      img: "/assets/blogs/b1.jpg",
+      link: "/blogs/WinterDentalCareBlog",
+    },
+   
   ];
   
 

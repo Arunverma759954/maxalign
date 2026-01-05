@@ -249,6 +249,21 @@ export default function WhiteningBlog() {
                       </p>
                     </div>
                   </Link>
+                    <Link href="/blogs/WinterDentalCareBlog">
+                    <div className="flex items-center gap-4 hover:opacity-80">
+                      <Image
+                        src="/assets/blogs/b1.jpg"
+                        width={90}
+                        height={60}
+                        alt="Blog 3"
+                        className="rounded-lg"
+                      />
+                      <p className="text-gray-700 font-medium">
+                       The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter.
+
+                      </p>
+                    </div>
+                  </Link>
                   
                 </div>
               </div>
