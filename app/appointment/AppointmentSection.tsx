@@ -12,25 +12,51 @@ export default function AppointmentSection() {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Appointment Data:", formData);
-    alert("Appointment submitted successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      date: "",
-      time: "",
-      service: "",
-      message: "",
-    });
-  };
+    setLoading(true);
+    setStatus(null);
 
+    try {
+      const res = await fetch("/api/appointment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      setLoading(false);
+
+      if (data.success) {
+        setStatus("✅ Appointment booked successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          date: "",
+          time: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        setStatus("❌ Failed to book appointment.");
+      }
+    } catch {
+      setLoading(false);
+      setStatus("❌ Server error. Try again later.");
+    }
+  };
   return (
     <section className="w-full relative overflow-hidden bg-gray-50">
       {/* Banner */}
@@ -51,79 +77,47 @@ export default function AppointmentSection() {
           <h2 className="text-3xl font-extrabold text-[#0B7A75] mb-8 md:text-center">
             Appointment Form
           </h2>
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-4 rounded-xl text-black border border-gray-300 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full p-4 rounded-xl text-black border border-gray-300 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full p-4 rounded-xl text-black border border-gray-300 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-              required
-            />
-            <input
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              className="w-full p-4 rounded-xl text-black border border-gray-300 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-              required
-            />
-            <input
-              type="time"
-              name="time"
-              value={formData.time}
-              onChange={handleChange}
-              className="w-full p-4 rounded-xl text-black border border-gray-300 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-              required
-            />
-            <select
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              className="w-full p-4 rounded-xl text-black border border-gray-300 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-              required
-            >
+         <form
+            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            onSubmit={handleSubmit}
+          >
+            <input name="name" value={formData.name} onChange={handleChange} required placeholder="Full Name" className="p-4 rounded-xl border" />
+            <input name="email" value={formData.email} onChange={handleChange} type="email" placeholder="Email" className="p-4 rounded-xl border" />
+            <input name="phone" value={formData.phone} onChange={handleChange} required placeholder="Phone" className="p-4 rounded-xl border" />
+            <input name="date" value={formData.date} onChange={handleChange} type="date" required className="p-4 rounded-xl border" />
+            <input name="time" value={formData.time} onChange={handleChange} type="time" required className="p-4 rounded-xl border" />
+
+            <select name="service" value={formData.service} onChange={handleChange} required className="p-4 rounded-xl border">
               <option value="">Select Service</option>
-              <option value="General Checkup">Orthodonic Treatment</option>
-              <option value="Teeth Cleaning">Teeth Whitening</option>
-              <option value="Orthodontics">Cavity Treatment</option>
-              <option value="Emergency Care">Gum Disease</option>
-              <option value="Invisalign">Invisalign</option>
-              <option value="Dental Implants">Dental Implants</option>
+              <option>Orthodontic Treatment</option>
+              <option>Teeth Whitening</option>
+              <option>Cavity Treatment</option>
+              <option>Gum Disease</option>
+              <option>Invisalign</option>
+              <option>Dental Implants</option>
             </select>
+
             <textarea
               name="message"
-              placeholder="Additional Message"
-              rows={4}
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-4 rounded-xl text-black border border-gray-300 focus:ring-2 focus:ring-[#0B7A75] outline-none md:col-span-2"
-            ></textarea>
+              placeholder="Additional Message"
+              className="p-4 rounded-xl border md:col-span-2"
+            />
+
             <button
               type="submit"
-              className="bg-gradient-to-r from-[#0B7A75] via-[#083f41] to-black text-white py-4 px-8 rounded-xl font-semibold shadow-lg hover:scale-105 transition transform md:col-span-2"
+              disabled={loading}
+              className="bg-gradient-to-r from-[#0B7A75] to-black text-white py-4 rounded-xl font-semibold md:col-span-2"
             >
-              Book Appointment
+              {loading ? "Booking..." : "Book Appointment"}
             </button>
+
+            {status && (
+              <p className="md:col-span-2 text-center font-medium">
+                {status}
+              </p>
+            )}
           </form>
         </div>
       </div>

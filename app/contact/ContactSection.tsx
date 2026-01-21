@@ -1,4 +1,49 @@
+"use client";
+import { useState } from "react";
+
 export default function ContactSection() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+      setLoading(false);
+
+      if (data.success) {
+        setStatus("✅ Message sent successfully!");
+        setForm({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("❌ Failed to send message.");
+      }
+    } catch {
+      setLoading(false);
+      setStatus("❌ Server error. Try again later.");
+    }
+  };
   return (
     <section className="w-full relative overflow-hidden bg-white">
 
@@ -34,35 +79,64 @@ export default function ContactSection() {
           <h3 className="text-3xl font-extrabold text-gray-800 mb-6 text-center">
             Contact Us
           </h3>
-          <form className="grid grid-cols-1 gap-6">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-4 rounded-xl border border-gray-300 bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-4 rounded-xl border border-gray-300 bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Subject"
-              className="w-full p-4 rounded-xl border border-gray-300 bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={6}
-              className="w-full p-4 rounded-xl border border-gray-300 bg-gray-50 text-gray-800 focus:ring-2 focus:ring-[#0B7A75] outline-none"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-gradient-to-r from-[#0B7A75] via-[#083f41] to-black text-white py-4 px-8 rounded-xl font-semibold shadow-lg hover:scale-105 transition transform"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
+         <form
+          className="grid grid-cols-1 gap-6 bg-white p-10 rounded-3xl shadow-xl"
+          onSubmit={handleSubmit}
+        >
+          <input
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            type="text"
+            placeholder="Your Name"
+            required
+            className="p-4 rounded-xl border bg-gray-50"
+          />
+
+          <input
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            type="email"
+            placeholder="Your Email"
+            required
+            className="p-4 rounded-xl border bg-gray-50"
+          />
+
+          <input
+            name="subject"
+            value={form.subject}
+            onChange={handleChange}
+            type="text"
+            placeholder="Subject"
+            className="p-4 rounded-xl border bg-gray-50"
+          />
+
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            rows={6}
+            required
+            placeholder="Your Message"
+            className="p-4 rounded-xl border bg-gray-50"
+          />
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-gradient-to-r from-[#0B7A75] to-black text-white py-4 rounded-xl font-semibold hover:scale-105 transition"
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+
+          {status && (
+            <p className="text-center font-medium text-gray-700">
+              {status}
+            </p>
+          )}
+        </form>
+      </div>
       </div>
 
       {/* Dark Contact Info Section (Bigger Divs) */}
