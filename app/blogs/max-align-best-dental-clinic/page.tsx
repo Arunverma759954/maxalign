@@ -19,7 +19,7 @@ export default function DentalCheckupBlog() {
     },
     {
       title: "The Importance of Regular Dental Check-Ups",
-      desc: "Skipping dental visits? Here’s why regular check-ups are essential...",
+      desc: "Skipping dental visits? Here's why regular check-ups are essential...",
       img: "/assets/blogs/b3.jpg",
       link: "/blogs/importance-of-dental-checkups",
     },
@@ -54,24 +54,22 @@ export default function DentalCheckupBlog() {
         </div>
       </section>
 
-      {/* FEATURED IMAGE */}
-      <div className="max-w-4xl mx-auto px-6 mt-20 mb-12">
-        <Image
-          src="/assets/blogs/b1.jpg"
-          alt="Featured Blog"
-          width={1000}
-          height={600}
-          className="rounded-2xl shadow-2xl border-4 border-white"
-        />
-      </div>
-
       {/* ================== PAGE CONTENT ================== */}
       <section className="w-full bg-white py-16">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-          {/* ============== LEFT ARTICLE (CONTENT) ============== */}
-          <article className="md:col-span-2 bg-white p-10 rounded-xl shadow-lg border border-gray-200">
-
+          {/* ============== LEFT ARTICLE - Image inside content box ============== */}
+          <article className="md:col-span-2 bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            <div className="overflow-hidden">
+              <Image
+                src="/assets/blogs/b1.jpg"
+                alt="Featured Blog"
+                width={900}
+                height={450}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="p-10">
             <div className="flex items-center text-gray-500 gap-6 text-sm mb-6">
               <span>👤 Admin</span>
               <span>📅 19 Jul 2025</span>
@@ -84,7 +82,7 @@ export default function DentalCheckupBlog() {
             <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
 
               <p>
-              Have you been putting off your dental visit? You are not alone. Many people delay going to the dentist unless they experience pain or discomfort. But what most people don’t realise is that regular dental check-ups are not just about solving problems, they are about preventing them.
+              Have you been putting off your dental visit? You are not alone. Many people delay going to the dentist unless they experience pain or discomfort. But what most people don't realise is that regular dental check-ups are not just about solving problems, they are about preventing them.
               </p>
 
               <p>
@@ -137,9 +135,10 @@ export default function DentalCheckupBlog() {
               <h3 className="text-2xl font-bold text-[#0B7A75]">Why Choose Maxalign Dental?</h3>
 
               <p>
-              Another overlooked benefit of regular check-ups is the trust and comfort you build with your dentist. At Maxalign Dental, we create a friendly environment where you feel relaxed and cared for. Whether you are coming in for preventive care or advanced solutions like invisible aligners in Marathahalli or dental implants, we ensure personalised care that suits your needs. Our team knows your dental history and offers advice that is right for you. Prevention is always better than cure. Don’t wait for pain — prioritize your oral health today.
+              Another overlooked benefit of regular check-ups is the trust and comfort you build with your dentist. At Maxalign Dental, we create a friendly environment where you feel relaxed and cared for. Whether you are coming in for preventive care or advanced solutions like invisible aligners in Marathahalli or dental implants, we ensure personalised care that suits your needs. Our team knows your dental history and offers advice that is right for you. Prevention is always better than cure. Don't wait for pain — prioritize your oral health today.
               </p>
 
+            </div>
             </div>
           </article>
 
@@ -147,28 +146,36 @@ export default function DentalCheckupBlog() {
           <aside className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 h-fit">
             <h3 className="text-2xl font-bold mb-6 text-gray-800">Latest Blogs</h3>
 
-            <ul className="space-y-8">
+            <ul className="space-y-5">
               {blogs.map((b, i) => (
-                <li key={i} className="flex gap-4 items-center">
-                  <Image
-                    src={b.img}
-                    alt={b.title}
-                    width={90}
-                    height={90}
-                    className="rounded-xl object-cover shadow-md"
-                  />
-                  <div>
-                    <Link
-                      href={b.link}
-                      className="font-semibold text-gray-800 hover:text-[#0B7A75] leading-tight"
-                    >
-                      {b.title}
-                    </Link>
-                    <p className="text-sm text-gray-500 mt-1">{b.desc}</p>
-                  </div>
+                <li key={i}>
+                  <Link
+                    href={b.link}
+                    className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group"
+                  >
+                    <div className="overflow-hidden">
+                      <Image
+                        src={b.img}
+                        alt={b.title}
+                        width={280}
+                        height={140}
+                        className="w-full h-28 object-cover group-hover:scale-105 transition duration-300"
+                      />
+                    </div>
+                    <div className="p-3">
+                      <p className="font-semibold text-gray-800 group-hover:text-[#0B7A75] leading-tight transition">{b.title}</p>
+                      <p className="text-sm text-gray-500 mt-1">{b.desc}</p>
+                    </div>
+                  </Link>
                 </li>
               ))}
             </ul>
+            {/* Book Appointment CTA */}
+            <Link href="/appointment" className="block mt-6 rounded-xl bg-gradient-to-r from-[#0A1F26] to-[#0B7A75] p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+              <p className="text-white font-bold text-lg">Ready for your best smile?</p>
+              <p className="text-white/90 text-sm mt-1 mb-4">Expert care at Maxalign Dental</p>
+              <span className="inline-block w-full py-3 px-6 rounded-lg bg-white text-[#0B7A75] font-semibold hover:bg-[#4EE0D4] hover:text-[#0A1F26] transition">BOOK APPOINTMENT</span>
+            </Link>
           </aside>
 
         </div>

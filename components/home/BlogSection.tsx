@@ -46,51 +46,51 @@ export default function BlogSection() {
   ];
 
   return (
-    <section className="py-20 bg-white text-black">
+    <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* TOP HEADING */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0B7A75]">
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
             Latest Blogs & Updates
           </h2>
-          <p className="text-gray-600 mt-3 max-w-2xl mx-auto text-lg">
-            Stay updated with the latest dental tips, treatments, and expert advice 
-            from Max Align Dental Clinic.
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-lg">
+            Stay updated with the latest dental tips, treatments, and expert advice from Max Align Dental Clinic.
           </p>
         </div>
 
-        {/* BLOG GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        {/* BLOG GRID - Image inside content box, premium cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs.map((blog, index) => (
-            <div
+            <Link
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition border border-gray-200"
+              href={blog.link}
+              className="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#0B7A75]/20"
             >
-              <Image
-                src={blog.img}
-                alt={blog.title}
-                width={400}
-                height={260}
-                className="rounded-t-xl w-full h-56 object-cover"
-              />
-
+              <div className="overflow-hidden">
+                <Image
+                  src={blog.img}
+                  alt={blog.title}
+                  width={400}
+                  height={260}
+                  className="w-full h-56 object-cover group-hover:scale-105 transition duration-500"
+                />
+              </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#0B7A75]">
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-[#0B7A75] transition line-clamp-2">
                   {blog.title}
                 </h3>
-
-                <p className="text-gray-600 mt-2 line-clamp-3">
+                <p className="text-gray-600 mt-3 line-clamp-3 text-sm leading-relaxed">
                   {blog.desc}
                 </p>
-
-                <Link href={blog.link}>
-                  <button className="mt-4 text-[#0B7A75] font-semibold hover:text-[#0a5e5a] transition">
-                    Read More →
-                  </button>
-                </Link>
+                <span className="inline-flex items-center mt-4 text-[#0B7A75] font-semibold group-hover:gap-3 transition-all">
+                  Read More
+                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

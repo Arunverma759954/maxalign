@@ -50,18 +50,19 @@ export default function RegularDentalCheckups() {
       {/* ===================== BLOG SECTION ===================== */}
       <section className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
         
-        {/* LEFT CONTENT COLUMN */}
+        {/* LEFT CONTENT COLUMN - Image inside content box */}
         <div className="md:col-span-2">
-
-          {/* Blog Image */}
-          <Image
-            src="/assets/blogs/b3.jpg"
-            alt="Regular Dental Check-ups"
-            width={900}
-            height={600}
-            className="w-full rounded-lg shadow-md mb-6"
-          />
-
+          <article className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+            <div className="overflow-hidden">
+              <Image
+                src="/assets/blogs/b3.jpg"
+                alt="Regular Dental Check-ups"
+                width={900}
+                height={450}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="p-6 md:p-10">
           {/* Meta */}
           <p className="text-gray-600 text-sm mb-4">Admin • 19 Jul 2025</p>
 
@@ -88,7 +89,7 @@ export default function RegularDentalCheckups() {
             </h2>
 
             <p>
-              If you’re considering long-term solutions like dental implants,
+              If you're considering long-term solutions like dental implants,
               regular dental visits ensure that your gums and jawbone remain
               healthy enough to support implants in the future. As a trusted{" "}
               <strong>dental implant clinic in Marathahalli</strong>, we always
@@ -102,7 +103,7 @@ export default function RegularDentalCheckups() {
             </p>
 
             <p>
-              If you’re planning <strong>teeth whitening near Marathahalli</strong>,
+              If you're planning <strong>teeth whitening near Marathahalli</strong>,
               your dentist must confirm that your gums and enamel are healthy to
               prevent sensitivity or complications.
             </p>
@@ -168,10 +169,12 @@ export default function RegularDentalCheckups() {
             </p>
 
             <p className="font-semibold text-gray-900">
-              Prevention is always better than cure — don’t wait for pain.
+              Prevention is always better than cure — don't wait for pain.
               Prioritize your oral health today.
             </p>
           </div>
+            </div>
+          </article>
         </div>
 
         {/* ===================== RIGHT SIDEBAR ===================== */}
@@ -186,22 +189,35 @@ export default function RegularDentalCheckups() {
               <Link
                 key={index}
                 href={blog.link}
-                className="flex items-start gap-3 hover:opacity-80 transition"
+                className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group"
               >
-                <Image
-                  src={blog.img}
-                  alt={blog.title}
-                  width={90}
-                  height={70}
-                  className="rounded-md object-cover"
-                />
-                <p className="text-gray-800 text-sm font-medium leading-tight">
+                <div className="overflow-hidden">
+                  <Image
+                    src={blog.img}
+                    alt={blog.title}
+                    width={280}
+                    height={140}
+                    className="w-full h-28 object-cover group-hover:scale-105 transition duration-300"
+                  />
+                </div>
+                <p className="p-3 text-gray-800 text-sm font-medium leading-tight">
                   {blog.title}
                 </p>
               </Link>
             ))}
           </div>
 
+          {/* Book Appointment CTA */}
+          <Link
+            href="/appointment"
+            className="block mt-6 rounded-xl bg-gradient-to-r from-[#0A1F26] to-[#0B7A75] p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+          >
+            <p className="text-white font-bold text-lg">Ready for your best smile?</p>
+            <p className="text-white/90 text-sm mt-1 mb-4">Expert care at Maxalign Dental</p>
+            <span className="inline-block w-full py-3 px-6 rounded-lg bg-white text-[#0B7A75] font-semibold hover:bg-[#4EE0D4] hover:text-[#0A1F26] transition">
+              BOOK APPOINTMENT
+            </span>
+          </Link>
         </aside>
       </section>
       </div>

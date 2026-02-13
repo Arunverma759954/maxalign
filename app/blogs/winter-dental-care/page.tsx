@@ -23,24 +23,22 @@ export default function WinterDentalCareBlog() {
           </div>
         </section>
 
-        {/* FEATURED IMAGE */}
-        <div className="max-w-4xl mx-auto px-6 mt-20 mb-12">
-          <Image
-            src="/assets/blogs/b3.jpg"
-            alt="Winter Dental Care"
-            width={1000}
-            height={600}
-            className="rounded-2xl shadow-2xl border-4 border-white"
-          />
-        </div>
-
         {/* ================== PAGE CONTENT ================== */}
         <section className="w-full bg-white py-16">
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-            {/* LEFT ARTICLE */}
-            <article className="md:col-span-2 bg-white p-10 rounded-xl shadow-lg border border-gray-200">
-
+            {/* LEFT ARTICLE - Image inside content box */}
+            <article className="md:col-span-2 bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+              <div className="overflow-hidden">
+                <Image
+                  src="/assets/blogs/b3.jpg"
+                  alt="Winter Dental Care"
+                  width={900}
+                  height={450}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="p-10">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0B7A75] mb-6 leading-snug">
                 The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter
               </h2>
@@ -187,6 +185,7 @@ export default function WinterDentalCareBlog() {
                 </p>
 
               </div>
+              </div>
             </article>
 
              {/* RIGHT SIDEBAR */}
@@ -196,83 +195,44 @@ export default function WinterDentalCareBlog() {
                   Latest Blogs
                 </h3>
 
-                <div className="space-y-6">
-                  <Link href="/blogs/max-align-best-dental-clinic">
-                    <div className="flex items-center gap-4 hover:opacity-80">
-                      <Image
-                        src="/assets/blogs/b1.jpg"
-                        width={90}
-                        height={60}
-                        alt="Blog 1"
-                        className="rounded-lg"
-                      />
-                      <p className="text-gray-700 font-medium">
-                        Why Max Align is one of the Best Dental Clinics in
-                        Marathahalli
-                      </p>
+                <div className="space-y-5">
+                  <Link href="/blogs/max-align-best-dental-clinic" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
+                    <div className="overflow-hidden">
+                      <Image src="/assets/blogs/b1.jpg" width={280} height={140} alt="Why Max Align is one of the Best Dental Clinics in Marathahalli" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
                     </div>
+                    <p className="p-3 text-gray-700 font-medium">Why Max Align is one of the Best Dental Clinics in Marathahalli</p>
                   </Link>
-
-                  <Link href="/blogs/professional-teeth-whitening">
-                    <div className="flex items-center gap-4 hover:opacity-80">
-                      <Image
-                        src="/assets/blogs/b2.jpg"
-                        width={90}
-                        height={60}
-                        alt="Blog 2"
-                        className="rounded-lg"
-                      />
-                      <p className="text-gray-700 font-medium">
-                        Top 5 Benefits of Professional Teeth Whitening
-                      </p>
+                  <Link href="/blogs/professional-teeth-whitening" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
+                    <div className="overflow-hidden">
+                      <Image src="/assets/blogs/b2.jpg" width={280} height={140} alt="Top 5 Benefits of Professional Teeth Whitening" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
                     </div>
+                    <p className="p-3 text-gray-700 font-medium">Top 5 Benefits of Professional Teeth Whitening</p>
                   </Link>
-
-                  <Link href="/blogs/importance-of-dental-checkups">
-                    <div className="flex items-center gap-4 hover:opacity-80">
-                      <Image
-                        src="/assets/blogs/b3.jpg"
-                        width={90}
-                        height={60}
-                        alt="Blog 3"
-                        className="rounded-lg"
-                      />
-                      <p className="text-gray-700 font-medium">
-                        The Importance of Regular Dental Check-Ups
-                      </p>
+                  <Link href="/blogs/importance-of-dental-checkups" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
+                    <div className="overflow-hidden">
+                      <Image src="/assets/blogs/b3.jpg" width={280} height={140} alt="The Importance of Regular Dental Check-Ups" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
                     </div>
+                    <p className="p-3 text-gray-700 font-medium">The Importance of Regular Dental Check-Ups</p>
                   </Link>
-                    <Link href="/blogs/teeth-whitening">
-                    <div className="flex items-center gap-4 hover:opacity-80">
-                      <Image
-                        src="/assets/blogs/b2.jpg"
-                        width={90}
-                        height={60}
-                        alt="Blog 3"
-                        className="rounded-lg"
-                      />
-                      <p className="text-gray-700 font-medium">
-                        Why Winter is the Best Time to Have Teeth Whitening in Bangalore
-                      </p>
+                  <Link href="/blogs/teeth-whitening" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
+                    <div className="overflow-hidden">
+                      <Image src="/assets/blogs/b2.jpg" width={280} height={140} alt="Why Winter is the Best Time to Have Teeth Whitening in Bangalore" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
                     </div>
+                    <p className="p-3 text-gray-700 font-medium">Why Winter is the Best Time to Have Teeth Whitening in Bangalore</p>
                   </Link>
-                   <Link href="/blogs/WinterDentalCareBlog">
-                    <div className="flex items-center gap-4 hover:opacity-80">
-                      <Image
-                        src="/assets/blogs/b1.jpg"
-                        width={90}
-                        height={60}
-                        alt="Blog 3"
-                        className="rounded-lg"
-                      />
-                      <p className="text-gray-700 font-medium">
-                       The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter.
-
-                      </p>
+                  <Link href="/blogs/WinterDentalCareBlog" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
+                    <div className="overflow-hidden">
+                      <Image src="/assets/blogs/b1.jpg" width={280} height={140} alt="The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
                     </div>
+                    <p className="p-3 text-gray-700 font-medium">The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter.</p>
                   </Link>
-                  
                 </div>
+                {/* Book Appointment CTA */}
+                <Link href="/appointment" className="block mt-6 rounded-xl bg-gradient-to-r from-[#0A1F26] to-[#0B7A75] p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+                  <p className="text-white font-bold text-lg">Ready for your best smile?</p>
+                  <p className="text-white/90 text-sm mt-1 mb-4">Expert care at Maxalign Dental</p>
+                  <span className="inline-block w-full py-3 px-6 rounded-lg bg-white text-[#0B7A75] font-semibold hover:bg-[#4EE0D4] hover:text-[#0A1F26] transition">BOOK APPOINTMENT</span>
+                </Link>
               </div>
             </aside>
           </div>
