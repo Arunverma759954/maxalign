@@ -195,37 +195,22 @@ export default function WinterDentalCareBlog() {
                   Latest Blogs
                 </h3>
 
-                <div className="space-y-5">
-                  <Link href="/blogs/max-align-best-dental-clinic" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
-                    <div className="overflow-hidden">
-                      <Image src="/assets/blogs/b1.jpg" width={280} height={140} alt="Why Max Align is one of the Best Dental Clinics in Marathahalli" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
-                    </div>
-                    <p className="p-3 text-gray-700 font-medium">Why Max Align is one of the Best Dental Clinics in Marathahalli</p>
-                  </Link>
-                  <Link href="/blogs/professional-teeth-whitening" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
-                    <div className="overflow-hidden">
-                      <Image src="/assets/blogs/b2.jpg" width={280} height={140} alt="Top 5 Benefits of Professional Teeth Whitening" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
-                    </div>
-                    <p className="p-3 text-gray-700 font-medium">Top 5 Benefits of Professional Teeth Whitening</p>
-                  </Link>
-                  <Link href="/blogs/importance-of-dental-checkups" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
-                    <div className="overflow-hidden">
-                      <Image src="/assets/blogs/b3.jpg" width={280} height={140} alt="The Importance of Regular Dental Check-Ups" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
-                    </div>
-                    <p className="p-3 text-gray-700 font-medium">The Importance of Regular Dental Check-Ups</p>
-                  </Link>
-                  <Link href="/blogs/teeth-whitening" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
-                    <div className="overflow-hidden">
-                      <Image src="/assets/blogs/b2.jpg" width={280} height={140} alt="Why Winter is the Best Time to Have Teeth Whitening in Bangalore" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
-                    </div>
-                    <p className="p-3 text-gray-700 font-medium">Why Winter is the Best Time to Have Teeth Whitening in Bangalore</p>
-                  </Link>
-                  <Link href="/blogs/WinterDentalCareBlog" className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group">
-                    <div className="overflow-hidden">
-                      <Image src="/assets/blogs/b1.jpg" width={280} height={140} alt="The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter" className="w-full h-28 object-cover group-hover:scale-105 transition duration-300" />
-                    </div>
-                    <p className="p-3 text-gray-700 font-medium">The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter.</p>
-                  </Link>
+                <div className="space-y-4">
+                  {[
+                    { title: "Why Max Align is one of the Best Dental Clinics in Marathahalli", img: "/assets/blogs/b1.jpg", link: "/blogs/max-align-best-dental-clinic", date: "19-07-2025" },
+                    { title: "Top 5 Benefits of Professional Teeth Whitening", img: "/assets/blogs/b2.jpg", link: "/blogs/professional-teeth-whitening", date: "13-07-2025" },
+                    { title: "The Importance of Regular Dental Check-Ups", img: "/assets/blogs/b3.jpg", link: "/blogs/importance-of-dental-checkups", date: "10-07-2025" },
+                    { title: "Why Winter is the Best Time to Have Teeth Whitening in Bangalore", img: "/assets/blogs/b2.jpg", link: "/blogs/teeth-whitening", date: "08-07-2025" },
+                    { title: "The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter", img: "/assets/blogs/b1.jpg", link: "/blogs/winter-dental-care", date: "05-07-2025" },
+                  ].map((blog, i) => (
+                    <Link key={i} href={blog.link} className="flex gap-4 items-start hover:opacity-90 transition group">
+                      <Image src={blog.img} alt={blog.title} width={80} height={80} className="rounded-xl object-cover shrink-0 w-20 h-20" />
+                      <div className="min-w-0 flex-1">
+                        <p className="text-gray-900 font-semibold text-sm leading-tight group-hover:text-[#0B7A75] transition line-clamp-2">{blog.title}</p>
+                        <p className="text-gray-500 text-xs mt-1">{blog.date}</p>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
                 {/* Book Appointment CTA */}
                 <Link href="/appointment" className="block mt-6 rounded-xl bg-gradient-to-r from-[#0A1F26] to-[#0B7A75] p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">

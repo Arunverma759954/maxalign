@@ -5,37 +5,11 @@ import Link from "next/link";
 
 export default function DentalCheckupBlog() {
   const blogs = [
-    {
-      title: "Why Max Align is one of the Best Dental Clinics in Marathahalli",
-      desc: "Finding the right dental clinic can be a challenge. Here is why Max Align stands out...",
-      img: "/assets/blogs/b1.jpg",
-      link: "/blogs/max-align-best-dental-clinic",
-    },
-    {
-      title: "Top 5 Benefits of Professional Teeth Whitening",
-      desc: "Reveal a brighter, more confident smile with safe and long-lasting whitening...",
-      img: "/assets/blogs/b2.jpg",
-      link: "/blogs/professional-teeth-whitening",
-    },
-    {
-      title: "The Importance of Regular Dental Check-Ups",
-      desc: "Skipping dental visits? Here's why regular check-ups are essential...",
-      img: "/assets/blogs/b3.jpg",
-      link: "/blogs/importance-of-dental-checkups",
-    },
-    {
-      title: "Why Winter is the Best Time to Have Teeth Whitening in Bangalore",
-      desc: "The season of winter brings a relief to Bangalore and it is ...",
-      img: "/assets/blogs/b2.jpg",
-      link: "/blogs/teeth-whitening",
-    },
-    {
-      title: " The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter.",
-      desc: "Winter has a tendency of transforming day-to-day habits ...",
-      img: "/assets/blogs/b1.jpg",
-      link: "/blogs/WinterDentalCareBlog",
-    },
-   
+    { title: "Why Max Align is one of the Best Dental Clinics in Marathahalli", img: "/assets/blogs/b1.jpg", link: "/blogs/max-align-best-dental-clinic", date: "19-07-2025" },
+    { title: "Top 5 Benefits of Professional Teeth Whitening", img: "/assets/blogs/b2.jpg", link: "/blogs/professional-teeth-whitening", date: "13-07-2025" },
+    { title: "The Importance of Regular Dental Check-Ups", img: "/assets/blogs/b3.jpg", link: "/blogs/importance-of-dental-checkups", date: "10-07-2025" },
+    { title: "Why Winter is the Best Time to Have Teeth Whitening in Bangalore", img: "/assets/blogs/b2.jpg", link: "/blogs/teeth-whitening", date: "08-07-2025" },
+    { title: "The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter", img: "/assets/blogs/b1.jpg", link: "/blogs/winter-dental-care", date: "05-07-2025" },
   ];
   
 
@@ -146,30 +120,17 @@ export default function DentalCheckupBlog() {
           <aside className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 h-fit">
             <h3 className="text-2xl font-bold mb-6 text-gray-800">Latest Blogs</h3>
 
-            <ul className="space-y-5">
+            <div className="space-y-4">
               {blogs.map((b, i) => (
-                <li key={i}>
-                  <Link
-                    href={b.link}
-                    className="block overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md hover:shadow-lg transition group"
-                  >
-                    <div className="overflow-hidden">
-                      <Image
-                        src={b.img}
-                        alt={b.title}
-                        width={280}
-                        height={140}
-                        className="w-full h-28 object-cover group-hover:scale-105 transition duration-300"
-                      />
-                    </div>
-                    <div className="p-3">
-                      <p className="font-semibold text-gray-800 group-hover:text-[#0B7A75] leading-tight transition">{b.title}</p>
-                      <p className="text-sm text-gray-500 mt-1">{b.desc}</p>
-                    </div>
-                  </Link>
-                </li>
+                <Link key={i} href={b.link} className="flex gap-4 items-start hover:opacity-90 transition group">
+                  <Image src={b.img} alt={b.title} width={80} height={80} className="rounded-xl object-cover shrink-0 w-20 h-20" />
+                  <div className="min-w-0 flex-1">
+                    <p className="font-semibold text-gray-900 text-sm leading-tight group-hover:text-[#0B7A75] transition line-clamp-2">{b.title}</p>
+                    <p className="text-gray-500 text-xs mt-1">{b.date}</p>
+                  </div>
+                </Link>
               ))}
-            </ul>
+            </div>
             {/* Book Appointment CTA */}
             <Link href="/appointment" className="block mt-6 rounded-xl bg-gradient-to-r from-[#0A1F26] to-[#0B7A75] p-6 text-center shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
               <p className="text-white font-bold text-lg">Ready for your best smile?</p>
