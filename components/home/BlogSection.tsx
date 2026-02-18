@@ -55,7 +55,7 @@ export default function BlogSection() {
                   {blog.desc}
                 </p>
                 <Link href={blog.link}>
-                  <button className="mt-4 text-[#0B7A75] font-semibold hover:text-[#0a5e5a] transition">
+                  <button className="mt-4 text-[#0B7A75] font-semibold hover:text-[#0a5e5a] transition cursor-pointer">
                     Read More →
                   </button>
                 </Link>
