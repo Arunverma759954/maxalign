@@ -112,6 +112,7 @@ export default function WhiteningBlog() {
 
               <div className="space-y-4">
                 {[
+                  { title: "Top 7 Dental Care Tips To Keep Your Smile Healthy This Winter", img: "/assets/4.webp", link: "/blogs/top-7-dental-care-tips-to-keep-your-smile-healthy-this-winter", date: "01-04-2026" },
                   { title: "Why Max Align is one of the Best Dental Clinics in Marathahalli", img: "/assets/blogs/b1.jpg", link: "/blogs/max-align-best-dental-clinic", date: "19-07-2025" },
                   { title: "Top 5 Benefits of Professional Teeth Whitening", img: "/assets/blogs/b2.jpg", link: "/blogs/professional-teeth-whitening", date: "13-07-2025" },
                   { title: "The Importance of Regular Dental Check-Ups", img: "/assets/blogs/b3.jpg", link: "/blogs/importance-of-dental-checkups", date: "10-07-2025" },

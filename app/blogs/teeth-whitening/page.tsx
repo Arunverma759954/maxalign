@@ -191,11 +191,12 @@ export default function WhiteningBlog() {
 
                 <div className="space-y-4">
                   {[
-                    { title: "Why Max Align is one of the Best Dental Clinics in Marathahalli", img: "/assets/blogs/b1.jpg", link: "/blogs/max-align-best-dental-clinic", date: "19-07-2025" },
-                    { title: "Top 5 Benefits of Professional Teeth Whitening", img: "/assets/blogs/b2.jpg", link: "/blogs/professional-teeth-whitening", date: "13-07-2025" },
-                    { title: "The Importance of Regular Dental Check-Ups", img: "/assets/blogs/b3.jpg", link: "/blogs/importance-of-dental-checkups", date: "10-07-2025" },
-                    { title: "Why Winter is the Best Time to Have Teeth Whitening in Bangalore", img: "/assets/blogs/b2.jpg", link: "/blogs/teeth-whitening", date: "08-07-2025" },
-                    { title: "The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter", img: "/assets/blogs/b1.jpg", link: "/blogs/winter-dental-care", date: "05-07-2025" },
+                    { title: "Top 7 Dental Care Tips To Keep Your Smile Healthy This Winter", img: "/assets/4.webp", link: "/blogs/top-7-dental-care-tips-to-keep-your-smile-healthy-this-winter", date: "01-04-2026" },
+                    { title: "Why Max Align is one of the Best Dental Clinics in Marathahalli", img: "/assets/1.webp", link: "/blogs/max-align-best-dental-clinic", date: "19-07-2025" },
+                    { title: "Top 5 Benefits of Professional Teeth Whitening", img: "/assets/2.webp", link: "/blogs/professional-teeth-whitening", date: "13-07-2025" },
+                    { title: "The Importance of Regular Dental Check-Ups", img: "/assets/3.webp", link: "/blogs/importance-of-dental-checkups", date: "10-07-2025" },
+                    { title: "Why Winter is the Best Time to Have Teeth Whitening in Bangalore", img: "/assets/5.webp", link: "/blogs/teeth-whitening", date: "08-07-2025" },
+                    { title: "The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter", img: "/assets/6.webp", link: "/blogs/winter-dental-care", date: "05-07-2025" },
                   ].map((blog, i) => (
                     <Link key={i} href={blog.link} className="flex gap-4 items-start hover:opacity-90 transition group">
                       <Image src={blog.img} alt={blog.title} width={80} height={80} className="rounded-xl object-cover shrink-0 w-20 h-20" />

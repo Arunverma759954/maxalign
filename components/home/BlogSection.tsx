@@ -5,18 +5,19 @@ import Link from "next/link";
 
 export default function BlogSection() {
   const blogs = [
-    { title: "Why Max Align is one of the Best Dental Clinics in Marathahalli", desc: "Finding the right dental clinic can be a challenge. Here is why Max Align stands out...", img: "/assets/blogs/b1.jpg", link: "/blogs/max-align-best-dental-clinic" },
-    { title: "Top 5 Benefits of Professional Teeth Whitening", desc: "Reveal a brighter, more confident smile with safe and long-lasting whitening...", img: "/assets/blogs/b2.jpg", link: "/blogs/professional-teeth-whitening" },
+    { title: "Top 7 Dental Care Tips To Keep Your Smile Healthy This Winter", desc: "Bangalore citizens enjoy winter with parties and activities. Keeping your smile healthy is essential to enjoy these precious moments...", img: "/assets/4.webp", link: "/blogs/top-7-dental-care-tips-to-keep-your-smile-healthy-this-winter", date: "01-04-2026" },
+    { title: "Why Max Align is one of the Best Dental Clinics in Marathahalli", desc: "Finding the right dental clinic can be a challenge. Here is why Max Align stands out...", img: "/assets/1.webp", link: "/blogs/max-align-best-dental-clinic" },
+    { title: "Top 5 Benefits of Professional Teeth Whitening", desc: "Reveal a brighter, more confident smile with safe and long-lasting whitening...", img: "/assets/2.webp", link: "/blogs/professional-teeth-whitening" },
     {
       title: "The Importance of Regular Dental Check-Ups",
       desc: "Skipping dental visits? Here’s why regular check-ups are essential...",
-      img: "/assets/blogs/b3.jpg",
+      img: "/assets/3.webp",
       link: "/blogs/importance-of-dental-checkups",
       date: "10-07-2025",
     },
-    { title: "Why Winter is the Best Time to Have Teeth Whitening in Bangalore", desc: "The season of winter brings a relief to Bangalore and it is ...", img: "/assets/blogs/b2.jpg", link: "/blogs/teeth-whitening" },
-    { title: "The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter", desc: "Winter has a tendency of transforming day-to-day habits ....", img: "/assets/blogs/b1.jpg", link: "/blogs/winter-dental-care" },
-    { title: "Common Dental Problems in Bangalore and How to Prevent Them", desc: "The busy life and lifestyle of Bangalore, the shift...", img: "/assets/blogs/b1.jpg", link: "/blogs/common-dental-problems-in-Bangalore" },
+    { title: "Why Winter is the Best Time to Have Teeth Whitening in Bangalore", desc: "The season of winter brings a relief to Bangalore and it is ...", img: "/assets/5.webp", link: "/blogs/teeth-whitening" },
+    { title: "The 7 Best Dental Care Hacks To Maintain a Healthy Smile This Winter", desc: "Winter has a tendency of transforming day-to-day habits ....", img: "/assets/6.webp", link: "/blogs/winter-dental-care" },
+    { title: "Common Dental Problems in Bangalore and How to Prevent Them", desc: "The busy life and lifestyle of Bangalore, the shift...", img: "/assets/1.webp", link: "/blogs/common-dental-problems-in-Bangalore" },
   ];
 
   return (
@@ -33,7 +34,7 @@ export default function BlogSection() {
           </p>
         </div>
 
-        {/* BLOG GRID - Old layout: image on top, title, description, Read More */}
+        {/* BLOG GRID - All 7 items in the same style */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {blogs.map((blog, index) => (
             <div
